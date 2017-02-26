@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="DocumentoIdentidad:" for="documentoIdentidad" />
+                    <p:inputText id="documentoIdentidad" value="#{personaBean.persona.documentoIdentidad}" title="DocumentoIdentidad" required="true" requiredMessage="The DocumentoIdentidad field is required."/>
+                    <p:outputLabel value="NombrePersona:" for="nombrePersona" />
+                    <p:inputText id="nombrePersona" value="#{personaBean.persona.nombrePersona}" title="NombrePersona" required="true" requiredMessage="The NombrePersona field is required."/>
+                    <p:outputLabel value="ApellidoPersona:" for="apellidoPersona" />
+                    <p:inputText id="apellidoPersona" value="#{personaBean.persona.apellidoPersona}" title="ApellidoPersona" required="true" requiredMessage="The ApellidoPersona field is required."/>
+                    <p:outputLabel value="FechaNacimientoPersona:" for="fechaNacimientoPersona" />
+                    <p:inputText id="fechaNacimientoPersona" value="#{personaBean.persona.fechaNacimientoPersona}" title="FechaNacimientoPersona" required="true" requiredMessage="The FechaNacimientoPersona field is required.">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </p:inputText>
+                    <p:outputLabel value="GeneroPersona:" for="generoPersona" />
+                    <p:inputText id="generoPersona" value="#{personaBean.persona.generoPersona}" title="GeneroPersona" required="true" requiredMessage="The GeneroPersona field is required."/>
+                    <p:outputLabel value="TelefonoPersona:" for="telefonoPersona" />
+                    <p:inputText id="telefonoPersona" value="#{personaBean.persona.telefonoPersona}" title="TelefonoPersona" required="true" requiredMessage="The TelefonoPersona field is required."/>
+                    <p:outputLabel value="DireccionPersona:" for="direccionPersona" />
+                    <p:inputText id="direccionPersona" value="#{personaBean.persona.direccionPersona}" title="DireccionPersona" />
+                    <p:outputLabel value="CorreoElectronicoPersona:" for="correoElectronicoPersona" />
+                    <p:inputText id="correoElectronicoPersona" value="#{personaBean.persona.correoElectronicoPersona}" title="CorreoElectronicoPersona" required="true" requiredMessage="The CorreoElectronicoPersona field is required."/>
+                    <p:outputLabel value="ContraseñaPersona:" for="contraseñaPersona" />
+                    <p:inputText id="contraseñaPersona" value="#{personaBean.persona.contraseñaPersona}" title="ContraseñaPersona" required="true" requiredMessage="The ContraseñaPersona field is required."/>
+                    <p:outputLabel value="RolesidRol:" for="rolesidRol" />
+                    <p:selectOneMenu id="rolesidRol" value="#{personaBean.persona.rolesidRol}" required="true" requiredMessage="The RolesidRol field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </p:selectOneMenu>
+                </p:panelGrid>
+            </h:form>
+        </f:view>
+
+<!--        Hello from Facelets
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />-->
+    </h:body>
+</html>
+
